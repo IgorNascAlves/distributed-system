@@ -1,4 +1,5 @@
 import socket
+import time
 #HOST = '192.168.43.228'              # Endereco IP do Servidor
 HOST = socket.gethostbyname(socket.gethostname())
 PORT = 5000            # Porta que o Servidor esta
@@ -12,5 +13,6 @@ while True:
     print (b)
     for c in range( 0 , b, 1):
         c
+    print("FIM")
     udp.sendto(str(c).encode(),cliente)
 udp.close()
